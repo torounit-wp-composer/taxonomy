@@ -1,7 +1,6 @@
 <?php
 
 namespace Torounit\WP;
-use Torounit\WP\Taxonomy_Filter;
 
 Class Taxonomy {
 
@@ -59,7 +58,7 @@ Class Taxonomy {
 		add_action( 'wp_loaded', array( $this,'initialize_taxonomy'), 10 );
 
 		if( !empty($this->args[ 'show_admin_column' ]) ) {
-			new Admin\Taxonomy_Filter( $this->taxonomy, $this->post_type );
+			new Taxonomy_Filter( $this->taxonomy, $this->post_type );
 		}
 
 
